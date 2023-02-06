@@ -20,7 +20,7 @@ jobs:
           # extended: true
 
       - name: Build
-        run: hugo --minify --gc --destination ../public --source ./exampleSite --themesDir ../.. --baseURL https://wildfenn.co.uk/
+        run: hugo --minify --gc --destination ../public --source ./exampleSite --themesDir ../.. --baseURL https://janraasch.github.io/hugo-scroll/
 
       - name: Deploy
         if: github.ref == 'refs/heads/main'

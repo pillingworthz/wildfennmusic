@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Latest News"
 weight: 3
 header_menu: true
 ---

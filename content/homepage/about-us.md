@@ -1,11 +1,12 @@
 ---
-title: "About Us"
+title: ""
 weight: 3
 header_menu: true
 ---
 
 ![Jess and Luke](images/jess-and-luke.jpg)
 
-##### Where you can find us
+##### Upcoming Gigs
 
-Currently gigging around Plymouth, Devon and South-East Cornwall.
++ Friday 17th February 2023 @ B-Bar, Barbican, Plymouth. 9pm
++ Thursday 15th June 2023 @ B-Bar, Barbican, Plymouth. 8pm

@@ -16,6 +16,6 @@ Matt
 
 ![Matt](images/matt.jpg)
 
-Ollie
+Olly
 
-![Ollie](images/ollie.jpg)
+![Olly](images/olly.jpg)

@@ -1,6 +1,6 @@
 ---
 title: "Who we are"
-weight: 2
+weight: 40
 header_menu: true
 ---
 
@@ -19,3 +19,7 @@ Matt
 Olly
 
 ![Olly](images/olly.jpg)
+
+Luke and Jess
+
+![Jess and Luke](images/jess-and-luke.jpg)

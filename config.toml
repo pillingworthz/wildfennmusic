@@ -39,3 +39,6 @@ title = "Wild Fenn - Indie Folk Band from Devon"
 
     [params.meta]
         keywords = "wildfenn, music, folk, indie, band, plymouth, devon, cornwall"
+
+    [markup.goldmark.renderer]
+        unsafe = true # Allow HTML in md files

@@ -4,6 +4,6 @@ weight: 20
 header_menu: true
 ---
 
-Check out out latest single on YouTube.
+Check out the live recording session of latest single on YouTube.
 
-{{< youtube zWF6CS6oCEQ >}}
+{{< youtube SGHHvbJOdsM >}}

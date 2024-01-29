@@ -21,6 +21,9 @@ projects:
   card1:
     title: "Graysx"
     text: "Place Cons Rerum Provide SuntSin Incid Fac Nonse Mollitia Quia Itaque! Iusto Necessi Ullam Recusand Nobi Quo Nequ Inulla Beatae Recusand Suscipit Ip Autem Rep Dol Quoquis Inu Rer Odiorem Suscipi Praes Accusant Quia Quosqu Anim Incidunt Nobis Odio Omnis"
+    youtube:
+      id: "SGHHvbJOdsM"
+      title: "Wild Hearts"
     img: "assets/img/jess-and-luke-bw.jpg"
   card2:
     title: "Luke"

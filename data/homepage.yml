@@ -10,7 +10,7 @@ main:
 # About
 about:
   title: "About us"
-  desc: "Wild Fenn are an Indie/Folk band based in Devon, UK. Rising and falling harmonies combined with poetic lyrics paint pictures of summer nights and bygone days. Our songs are heavily inspired by the natural world and our lyrics aim to convey a subtle urgency to remember, cherish and protect our wild places."
+  desc: ""
   button:
     enable: false
     text: "Button"
@@ -19,25 +19,25 @@ about:
 
 projects:
   card1:
-    title: "Graysx"
-    text: "Place Cons Rerum Provide SuntSin Incid Fac Nonse Mollitia Quia Itaque! Iusto Necessi Ullam Recusand Nobi Quo Nequ Inulla Beatae Recusand Suscipit Ip Autem Rep Dol Quoquis Inu Rer Odiorem Suscipi Praes Accusant Quia Quosqu Anim Incidunt Nobis Odio Omnis"
+    title: "Wild Hearts"
+    text: ""
     youtube:
       id: "SGHHvbJOdsM"
       title: "Wild Hearts"
     img: "assets/img/jess-and-luke.jpg"
   card2:
     title: "Luke"
-    text: "Place Cons Rerum Provide SuntSin Incid Fac Nonse Mollitia Quia Itaque! Iusto Necessi Ullam Recusand Nobi Quo Nequ Inulla Beatae Recusand Suscipit Ip Autem Rep Dol Quoquis Inu Rer Odiorem Suscipi Praes Accusant Quia Quosqu Anim Incidunt Nobis Odio Omnis"
+    text: "Luke Engel (main vocals, harmonies, acoustic guitar, electric guitar, mandolin) - Luke loves being outdoors and you can often find him wandering in wild places looking for cool mushrooms and inspiration for his songwriting."
     img: "assets/img/luke.jpg"
   card3:
     title: "Jess"
-    text: "Place Cons Rerum Provide SuntSin Incid Fac Nonse Mollitia Quia Itaque! Iusto Necessi Ullam Recusand Nobi Quo Nequ Inulla Beatae Recusand Suscipit Ip Autem Rep Dol Quoquis Inu Rer Odiorem Suscipi Praes Accusant Quia Quosqu Anim Incidunt Nobis Odio Omnis"
+    text: "Jess Illingworth (main vocals, harmonies, acoustic guitar, mandolin) - Jess is known by the rest of the band as ‘one take Jess’. She loves walking by the coast and writing lyrics that reach out to people."
     img: "assets/img/jess.jpg"
   card4:
     title: "Matt"
-    text: "Place Cons Rerum Provide SuntSin Incid Fac Nonse Mollitia Quia Itaque! Iusto Necessi Ullam Recusand Nobi Quo Nequ Inulla Beatae Recusand Suscipit Ip Autem Rep Dol Quoquis Inu Rer Odiorem Suscipi Praes Accusant Quia Quosqu Anim Incidunt Nobis Odio Omnis"
+    text: "Matthew Gordon Price (percussion) - Matt, who almost exclusively wears black and a pair of very round sunglasses, loves any excuse to get out the djembe drum."
     img: "assets/img/matt.jpg"
   card5:
     title: "Olly"
-    text: "Place Cons Rerum Provide SuntSin Incid Fac Nonse Mollitia Quia Itaque! Iusto Necessi Ullam Recusand Nobi Quo Nequ Inulla Beatae Recusand Suscipit Ip Autem Rep Dol Quoquis Inu Rer Odiorem Suscipi Praes Accusant Quia Quosqu Anim Incidunt Nobis Odio Omnis"
+    text: "Olly Parker (bass, harmonies) - Olly is the most laid back member of Wild Fenn and enjoys sneaking funky bass lines into the songs."
     img: "assets/img/olly.jpg"

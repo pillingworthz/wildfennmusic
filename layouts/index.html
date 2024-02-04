@@ -24,7 +24,15 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
                         <h2 class="text-white mb-4">{{ .title }}</h2>
-                        <p class="text-white-50">{{ .desc }}</p>
+                        <p class="text-white-50 text-start">
+                            Wild Fenn (previously known as Engel and the Mountain People) are an Indie/Folk band based in Devon, UK. Songwriters Luke Engel and Jess Illingworth love writing songs with beautiful harmonies that work both in live performances and in recordings. Although sometimes performing as a duo, Wild Fenn generally perform live as a 4-piece.
+                        </p>
+                        <p class="text-white-50 text-start">
+                            Wild Fenn’s latest single Wild Hearts was played by BBC Introducing on BBC Radio Cornwall and BBC Radio Devon.
+                        </p>
+                        <p class="text-white-50 text-start">
+                            “Rising and falling harmonies combined with poetic lyrics paint pictures of summer nights and bygone days. Wild Fenn’s songs are heavily inspired by the natural world and their lyrics aim to convey a subtle urgency to remember, cherish and protect our wild places.” - <em>BBC Introducing</em>
+                        </p>
                         {{ if .button.enable }}
                         <a class="btn btn-primary about-btn" href="{{ .button.url }}">{{ .button.text }}</a>
                         {{ end }}
@@ -37,10 +45,10 @@
 
         <!-- Projects-->
         {{ with site.Data.homepage.projects }}
-        <section class="projects-section bg-light" id="projects">
+        <section class="projects-section bg-light">
             <div class="container px-4 px-lg-5">
                 <!-- Featured Project Row-->
-                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center" id="latest">
                     <div class="col-xl-8 col-lg-7">
                         <!-- <img class="img-fluid mb-3 mb-lg-0" src="{{ .card1.img }}" alt="..." /> -->
                         <iframe src="https://www.youtube.com/embed/{{ .card1.youtube.id }}?autoplay=1" style="width:100%; height: 480px;" allowfullscreen title="{{ .card1.youtube.title }}"></iframe>
@@ -48,12 +56,13 @@
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4>{{ .card1.title }}</h4>
-                            <p class="text-black-50 mb-0">{{ .card1.text }}</p>
+                            <p class="text-black-50 text-start">Wild Hearts is about adventure, freedom, and a connection with nature. The song leads you down a wild road, taking you away from the city, through an old pine gate into the forest. It’s a song about the idea of running with wild hearts and making your name known in the world, despite the challenges you encounter. This song is Wild Fenn’s first release with our newest member, Jess Illingworth, on guitar and vocals.</p>
+                            <p class="text-black-50 text-start">Check out the live session of our latest single Wild Hearts on YouTube. We filmed this in Plymbridge Woods (surrounded by lots of wild garlic!). Thank you to Louis Goldman for the videography.</p>
                         </div>
                     </div>
                 </div>
                 <!-- Project One Row-->
-                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center" id="theband">
                     <div class="col-lg-6"><img class="img-fluid img-bw" src="{{ .card2.img }}" alt="..." /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
@@ -116,6 +125,18 @@
         </section>
         {{ end }}
 
+        <!-- Upcoming gigs -->
+        <section class="upcoming-gigs" id="upcoming">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <a href="https://www.songkick.com/artists/10261226" class="songkick-widget" data-theme="light" data-track-button="on" data-detect-style="true" data-background-color="transparent" data-locale="en">Wild Fenn Tour Dates</a>
+                        <script src="//widget.songkick.com/10261226/widget.js"></script>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Signup-->
         {{ if site.Params.signup.enabled }}
         <section class="signup-section" id="signup">
@@ -145,7 +166,7 @@
         {{ end }}
 
         <!-- Contact-->
-        <section class="contact-section bg-black">
+        <section class="contact-section bg-black" id="contact">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-md-4 mb-3 mb-md-0">
@@ -161,8 +182,8 @@
                     <div class="col-md-4 mb-3 mb-md-0">
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
-                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Address</h4>
+                                <i class="fab fa-facebook text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Facebook</h4>
                                 <hr class="my-4 mx-auto" />
                                 <div class="small text-black-50">{{ site.Params.address }}</div>
                             </div>
@@ -171,8 +192,8 @@
                     <div class="col-md-4 mb-3 mb-md-0">
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
-                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Phone</h4>
+                                <i class="fab fa-instagram text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Instagram</h4>
                                 <hr class="my-4 mx-auto" />
                                 <div class="small text-black-50">{{ site.Params.phone }}</div>
                             </div>

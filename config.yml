@@ -8,9 +8,10 @@ params:
   favicon: "assets/favicon.png"
 
 # Info
-  address: "DM @wildfennmusic"
-  email: "enquiries@wildfenn.co.uk"
-  phone: "DM @wildfennmusic"
+  contact:
+    email: "enquiries@wildfenn.co.uk"
+    instagram: "DM @wildfenn"
+    facebook: "DM @wildfennmusic"
 
 # Socials
   spotify: "https://open.spotify.com/artist/3BXB84OdyawXkx1wv5T6Ra?si=UUzIL9QkR1GiikFc3Yfdng"

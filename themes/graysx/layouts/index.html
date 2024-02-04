@@ -30,7 +30,7 @@
                         {{ end }}
                     </div>
                 </div>
-                <img class="img-fluid" src="{{ .image }}" alt="..." />
+                <img class="img-fluid img-bw" src="{{ .image }}" alt="..." />
             </div>
         </section>
         {{ end }}
@@ -54,7 +54,7 @@
                 </div>
                 <!-- Project One Row-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="{{ .card2.img }}" alt="..." /></div>
+                    <div class="col-lg-6"><img class="img-fluid img-bw" src="{{ .card2.img }}" alt="..." /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -69,7 +69,7 @@
                 </div>
                 <!-- Project Two Row-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="{{ .card3.img }}" alt="..." /></div>
+                    <div class="col-lg-6"><img class="img-fluid img-bw" src="{{ .card3.img }}" alt="..." /></div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -84,7 +84,7 @@
                 </div>
                 <!-- Project Three Row-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="{{ .card4.img }}" alt="..." /></div>
+                    <div class="col-lg-6"><img class="img-fluid img-bw" src="{{ .card4.img }}" alt="..." /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -99,7 +99,7 @@
                 </div>
                 <!-- Project Four Row-->
                 <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="{{ .card5.img }}" alt="..." /></div>
+                    <div class="col-lg-6"><img class="img-fluid img-bw" src="{{ .card5.img }}" alt="..." /></div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
@@ -115,7 +115,9 @@
             </div>
         </section>
         {{ end }}
+
         <!-- Signup-->
+        {{ if site.Params.signup.enabled }}
         <section class="signup-section" id="signup">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5">
@@ -140,6 +142,8 @@
                 </div>
             </div>
         </section>
+        {{ end }}
+
         <!-- Contact-->
         <section class="contact-section bg-black">
             <div class="container px-4 px-lg-5">
@@ -147,20 +151,20 @@
                     <div class="col-md-4 mb-3 mb-md-0">
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
-                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Address</h4>
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
                                 <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">{{ site.Params.address }}</div>
+                                <div class="small text-black-50"><a href="#!">{{ site.Params.email }}</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 mb-3 mb-md-0">
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
-                                <i class="fas fa-envelope text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Email</h4>
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Address</h4>
                                 <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="#!">{{ site.Params.email }}</a></div>
+                                <div class="small text-black-50">{{ site.Params.address }}</div>
                             </div>
                         </div>
                     </div>
@@ -176,8 +180,12 @@
                     </div>
                 </div>
                 <div class="social d-flex justify-content-center">
-                    <a class="mx-2" href="{{ site.Params.twitter }}"><i class="fab fa-twitter"></i></a>
-                    <a class="mx-2" href="{{ site.Params.facebook }}"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="{{ site.Params.spotify }}"><i class="fab fa-spotify"></i></a>
+                    <a class="mx-2" href="{{ site.Params.youtube }}"><i class="fab fa-youtube"></i></a>
+                    <a class="mx-2" href="{{ site.Params.tiktok }}"><i class="fab fa-tiktok"></i></a>
+                    <a class="mx-2" href="{{ site.Params.instagram }}"><i class="fab fa-instagram"></i></a>
+                    <a class="mx-2" href="{{ site.Params.facebook }}"><i class="fab fa-facebook"></i></a>
+                    <a class="mx-2" href="{{ site.Params.bandcamp }}"><i class="fab fa-bandcamp"></i></a>
                     <a class="mx-2" href="{{ site.Params.github }}"><i class="fab fa-github"></i></a>
                 </div>
             </div>

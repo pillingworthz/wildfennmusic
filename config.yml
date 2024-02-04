@@ -1,0 +1,45 @@
+baseURL: http://example.org/
+languageCode: 'en-gb'
+theme: 'graysx'
+title: 'WILD FENN'
+
+## Site Settings
+params:
+  logo: ""
+  favicon: "assets/favicon.png"
+
+# Info
+  address: "123 Arch B1W, GNU/Linux"
+  email: "enquiries@wildfenn.co.uk"
+  phone: "123456"
+
+# Socials
+  spotify: "https://open.spotify.com/artist/3BXB84OdyawXkx1wv5T6Ra?si=UUzIL9QkR1GiikFc3Yfdng"
+  youtube: "https://www.youtube.com/@wildfenn"
+  tiktok: "https://www.tiktok.com/@wildfenn"
+  instagram: "https://www.instagram.com/wildfenn/"
+  facebook: "https://www.facebook.com/wildfennmusic"
+  bandcamp: "https://wildfenn.bandcamp.com/"
+  github: "https://github.com/pillingworthz/wildfennmusic"
+
+# Sign-up
+  signup:
+    enabled: true
+
+# Startbootstrap Contact Form Token https://startbootstrap.com/solution/contact-forms
+  sbtoken: "TOKEN_HERE"
+
+## Menu Items
+menu:
+  - main:
+    name: "About"
+    URL: "#about"
+    weight: 1
+  - main:
+    name: "Projects"
+    URL: "#projects"
+    weight: 2
+  - main:
+    name: "Contact"
+    URL: "#signup"
+    weight: 3

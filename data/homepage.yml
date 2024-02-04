@@ -1,7 +1,7 @@
 # Main Title
 main:
   header:
-    title : "WILD FENN" # Title Text
+    title : "Wild Fenn" # Title Text
     description : "Indie/Folk band based in Devon, UK" # Title Desc
     button:
       text: "Learn More" # Button Text
@@ -15,7 +15,7 @@ about:
     enable: false
     text: "Button"
     url: "#"
-  image: "assets/img/pine-trees-bw.jpg"
+  image: "assets/img/about-us.jpg"
 
 projects:
   card1:
@@ -24,20 +24,20 @@ projects:
     youtube:
       id: "SGHHvbJOdsM"
       title: "Wild Hearts"
-    img: "assets/img/jess-and-luke-bw.jpg"
+    img: "assets/img/jess-and-luke.jpg"
   card2:
     title: "Luke"
     text: "Place Cons Rerum Provide SuntSin Incid Fac Nonse Mollitia Quia Itaque! Iusto Necessi Ullam Recusand Nobi Quo Nequ Inulla Beatae Recusand Suscipit Ip Autem Rep Dol Quoquis Inu Rer Odiorem Suscipi Praes Accusant Quia Quosqu Anim Incidunt Nobis Odio Omnis"
-    img: "assets/img/luke-bw.jpg"
+    img: "assets/img/luke.jpg"
   card3:
     title: "Jess"
     text: "Place Cons Rerum Provide SuntSin Incid Fac Nonse Mollitia Quia Itaque! Iusto Necessi Ullam Recusand Nobi Quo Nequ Inulla Beatae Recusand Suscipit Ip Autem Rep Dol Quoquis Inu Rer Odiorem Suscipi Praes Accusant Quia Quosqu Anim Incidunt Nobis Odio Omnis"
-    img: "assets/img/jess-bw.jpg"
+    img: "assets/img/jess.jpg"
   card4:
     title: "Matt"
     text: "Place Cons Rerum Provide SuntSin Incid Fac Nonse Mollitia Quia Itaque! Iusto Necessi Ullam Recusand Nobi Quo Nequ Inulla Beatae Recusand Suscipit Ip Autem Rep Dol Quoquis Inu Rer Odiorem Suscipi Praes Accusant Quia Quosqu Anim Incidunt Nobis Odio Omnis"
-    img: "assets/img/matt-bw.jpg"
+    img: "assets/img/matt.jpg"
   card5:
     title: "Olly"
     text: "Place Cons Rerum Provide SuntSin Incid Fac Nonse Mollitia Quia Itaque! Iusto Necessi Ullam Recusand Nobi Quo Nequ Inulla Beatae Recusand Suscipit Ip Autem Rep Dol Quoquis Inu Rer Odiorem Suscipi Praes Accusant Quia Quosqu Anim Incidunt Nobis Odio Omnis"
-    img: "assets/img/olly-bw.jpg"
+    img: "assets/img/olly.jpg"

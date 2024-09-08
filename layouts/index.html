@@ -17,6 +17,27 @@
                 </div>
             </div>
         </header>
+
+        <!-- EP Launch -->
+        {{ with site.Data.homepage.eplaunch }}
+        <section class="about-section text-center" id="eplaunch">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">{{ .title }}</h2>
+                        <p class="text-white-50 text-start">
+                            Spend an evening with Wild Fenn to celebrate the release of their debut EP 'Lost In Another Song'. They will be playing a full band gig including all of the songs on the EP in the stunning Refectory Bar in Plymouth Gin Distillery. It will be an intimate evening of indie folk music, a perfect way to end your weekend!
+                        </p>
+                        <p class="text-white-50 text-start">
+                            <a href="https://www.eventbrite.co.uk/e/wild-fenn-debut-ep-launch-show-tickets-1004024242537">Buy tickets on eventbrite</a>
+                        </p>
+                    </div>
+                </div>
+                <img class="img-fluid-66" src="{{ .image }}" alt="Wild Fenn with Olly and Matt standing either side of Luke and Jess sitting on a bench, looking cool."/>
+            </div>
+        </section>
+        {{ end }}
+
         <!-- About-->
         {{ with site.Data.homepage.about }}
         <section class="about-section text-center" id="about">
@@ -25,13 +46,19 @@
                     <div class="col-lg-8">
                         <h2 class="text-white mb-4">{{ .title }}</h2>
                         <p class="text-white-50 text-start">
-                            Wild Fenn (previously known as Engel and the Mountain People) are an Indie/Folk band based in Devon, UK. Songwriters Luke Engel and Jess Illingworth love writing songs with beautiful harmonies that work both in live performances and in recordings. Although sometimes performing as a duo, Wild Fenn generally perform live as a 4-piece.
+                            Wild Fenn are an Indie/Folk band based in Devon, UK. Songwriters Luke Engel and Jess Illingworth love writing songs with beautiful harmonies that work both in live performances and in recordings. Their lyrics often take inspiration from nature and lead the listener to wild places.
                         </p>
                         <p class="text-white-50 text-start">
-                            Wild Fenn’s latest single Wild Hearts was played by BBC Introducing on BBC Radio Cornwall and BBC Radio Devon.
+                            The band started releasing music in 2019 under the name Engel and the Mountain People and changed to Wild Fenn with Jess joining at the beginning of 2022. Wild Fenn are influenced by the likes of Gregory Alan Isokov, Roo Panes, Frank Turner and The Lone Bellow (among others).
+                        </p>
+                        <p class="text-white-50 text-start">
+                            Wild Fenn’s latest singles Wild Hearts and South Coast were played by BBC Introducing on BBC Radio Cornwall and BBC Radio Devon. Wild Fenn have previously performed at the Great Estate Festival in Cornwall in 2022 and 2024 as well as Tunes in the Park in 2024.
                         </p>
                         <p class="text-white-50 text-start">
                             “Rising and falling harmonies combined with poetic lyrics paint pictures of summer nights and bygone days. Wild Fenn’s songs are heavily inspired by the natural world and their lyrics aim to convey a subtle urgency to remember, cherish and protect our wild places.” - <em>BBC Introducing</em>
+                        </p>
+                        <p class="text-white-50 text-start">
+                            “A gentile and beautiful way to open the BBC Introducing stage” - <em>Dan Pascoe, BBC Introducing</em>
                         </p>
                         {{ if .button.enable }}
                         <a class="btn btn-primary about-btn" href="{{ .button.url }}">{{ .button.text }}</a>
@@ -47,6 +74,7 @@
         {{ with site.Data.homepage.projects }}
         <section class="projects-section bg-light">
             <div class="container px-4 px-lg-5">
+
                 <!-- Featured Project Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center" id="latest">
                     <div class="col-xl-8 col-lg-7">
@@ -61,6 +89,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Project One Row-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center" id="theband">
                     <div class="col-lg-6"><img class="img-fluid img-bw" src="{{ .card2.img }}" alt="..." /></div>

@@ -7,6 +7,16 @@ main:
       text: "Learn More" # Button Text
       url: "#about" # Button URL
 
+# EP Launch
+eplaunch:
+  title: "EP Launch - Lost In Another Song"
+  desc: ""
+  button:
+    enable: false
+    text: "Button"
+    url: "#"
+  image: "assets/img/lost-in-another-song-ep-launch-poster.png"
+
 # About
 about:
   title: "About us"

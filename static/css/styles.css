@@ -608,6 +608,16 @@ progress {
   height: auto;
 }
 
+.img-fluid-75 {
+  max-width: 75%;
+  height: auto;
+}
+
+.img-fluid-66 {
+  max-width: 66%;
+  height: auto;
+}
+
 .img-bw {
   filter: grayscale(100%);
 }

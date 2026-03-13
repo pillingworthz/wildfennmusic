@@ -1,245 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 {{- partial "head.html" . -}}
+
 <body id="page-top">
-{{- partial "header.html" . -}}
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container px-4 px-lg-5 d-flex h-50 align-items-center justify-content-center">
-                <div class="d-flex justify-content-center">
-                    <div class="text-center">
-                        {{ with site.Data.homepage.main }}
-                        <h1 class="mx-auto my-0 text-uppercase">{{ .header.title }}</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">{{ .header.description }}</h2>
-                        <a class="btn btn-primary" href="{{ .header.button.url }}">{{ .header.button.text }}</a>
-                        {{ end }}
+    {{- partial "header.html" . -}}
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 d-flex h-50 align-items-center justify-content-center">
+            <div class="d-flex justify-content-center">
+                <div class="text-center">
+                    {{ with site.Data.homepage.main }}
+                    <h1 class="mx-auto my-0 text-uppercase">{{ .header.title }}</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">{{ .header.description }}</h2>
+                    <a class="btn btn-primary" href="{{ .header.button.url }}">{{ .header.button.text }}</a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- EP Launch -->
+    {{ with site.Data.homepage.eplaunch }}
+    <section class="about-section text-center" id="latest">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-white mb-4">Latest Release: The Hibernation Song</h2>
+                    <p class="text-white-50 text-start">
+                        The Hibernation Song is Wild Fenns’ second release from their upcoming EP, A Place to Call Home.
+                        It’s a song for winter and for difficult days, when the cold and darkness sets in and you lean
+                        on good memories to stay positive, remembering that the summer sun will return. We think this
+                        time of year especially, we all need a little reminder that warmer days are just over the
+                        horizon.
+                    <p class="text-white-50 text-start">
+                        "The second release this year from this glorious Devon Based Duo. This beautiful track is like a
+                        comfort blanket of tender harmonies and lapping strings that folds around you on a cold night.
+                        It sits, for me, at the moment when the shadows are darkest and the last warm rays of a winter
+                        sun are fading."
+                        <a href="https://folkmylife.co.uk/03-2026-march-a-bandcamp-playlist-for-the-spring/">Folk My
+                            Life</a>
+                    </p>
+                    <img class="img-fluid-66" src="assets/img/the-hibernation-song.jpg"
+                        alt="A sleeping hedgehog, curled up undergound benath a snowy scene." />
+                    <p class="text-white-50 text-start">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{ end }}
+
+    <!-- About-->
+    {{ with site.Data.homepage.about }}
+    <section class="about-section text-center" id="about">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-white mb-4">{{ .title }}</h2>
+                    <p class="text-white-50 text-start">
+                        Wild Fenn are an Indie/Folk band based in Devon, UK. Songwriters Luke Engel and Jess Illingworth
+                        love writing songs with beautiful harmonies. Their lyrics often take inspiration from nature and
+                        lead the listener to wild places. Wild Fenn are influenced by the likes of Gregory Alan Isokov,
+                        Roo Panes, Frank Turner and The Lone Bellow and create music that is both upbeat and grounding.
+                    </p>
+                    <p class="text-white-50 text-start">
+                        Wild Fenn’s harmonies are a key part of what makes their live performances special. Luke and
+                        Jess have been asked on many occasions if they are siblings because their voices fit together so
+                        well. The band take their audience on a journey at each gig, through lyrics talking about things
+                        that are important to them including connecting with nature, self worth, wellbeing as well as
+                        heartbreak.
+                    </p>
+                    <p class="text-white-50 text-start">
+                        Wild Fenn released their debut EP ‘Lost In Another Song’ in September 2024 and played a sold out
+                        EP Launch Show at Plymouth Gin Distillery. The band have plenty more exciting music to be
+                        released and are planning on putting out their second EP in 2026.
+                    </p>
+                    <p class="text-white-50 text-start">
+                        BBC Introducing: South West’s Dan Pascoe is a big fan of the work Wild Fenn have been producing,
+                        playing their recent singles and a track from their debut EP on his show. Wild Fenn have
+                        performed at a variety of festivals across the South West including: the Great Estate Festival,
+                        Tunes In The Park, Little Orchard, Looe Weekender and Salcombe Live.
+                    </p>
+                    <p class="text-white-50 text-start">
+                        "A gentile and beautiful way to open the BBC Introducing stage" - Dan Pascoe, BBC Introducing
+                    </p>
+                    {{ if .button.enable }}
+                    <a class="btn btn-primary about-btn" href="{{ .button.url }}">{{ .button.text }}</a>
+                    {{ end }}
+                </div>
+            </div>
+            <img class="img-fluid" src="{{ .image }}" alt="..." />
+        </div>
+    </section>
+    {{ end }}
+
+    <!-- Projects-->
+    {{ with site.Data.homepage.projects }}
+    <section class="projects-section bg-light">
+        <div class="container px-4 px-lg-5">
+
+            <!-- Featured Project Row-->
+            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                <div class="col-xl-8 col-lg-7">
+                    <!-- <img class="img-fluid mb-3 mb-lg-0" src="{{ .card1.img }}" alt="..." /> -->
+                    <iframe src="https://www.youtube.com/embed/{{ .card1.youtube.id }}?autoplay=1"
+                        style="width:100%; height: 420px;" allowfullscreen title="{{ .card1.youtube.title }}"></iframe>
+                </div>
+                <div class="col-xl-4 col-lg-5">
+                    <div class="featured-text text-center text-lg-left">
+                        <h4>{{ .card1.title }}</h4>
+                        <p class="text-black-50 text-start">Wild Hearts is about adventure, freedom, and a connection
+                            with nature. The song leads you down a wild road, taking you away from the city, through an
+                            old pine gate into the forest. It’s a song about the idea of running with wild hearts and
+                            making your name known in the world, despite the challenges you encounter. This song is Wild
+                            Fenn’s first release with our newest member, Jess Illingworth, on guitar and vocals.</p>
+                        <p class="text-black-50 text-start">Check out the live session of our latest single Wild Hearts
+                            on YouTube. We filmed this in Plymbridge Woods (surrounded by lots of wild garlic!). Thank
+                            you to Louis Goldman for the videography.</p>
                     </div>
                 </div>
             </div>
-        </header>
 
-        <!-- EP Launch -->
-        {{ with site.Data.homepage.eplaunch }}
-        <section class="about-section text-center" id="eplaunch">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2 class="text-white mb-4">{{ .title }}</h2>
-                        <p class="text-white-50 text-start">
-                            Spend an evening with Wild Fenn to celebrate the release of their debut EP 'Lost In Another Song'. They will be playing a full band gig including all of the songs on the EP in the stunning Refectory Bar in Plymouth Gin Distillery. It will be an intimate evening of indie folk music, a perfect way to end your weekend!
-                        </p>
-                        <p class="text-white-50 text-start">
-                            <a href="https://www.eventbrite.co.uk/e/wild-fenn-debut-ep-launch-show-tickets-1004024242537">Buy tickets on eventbrite</a>
-                        </p>
-                    </div>
-                </div>
-                <img class="img-fluid-66" src="{{ .image }}" alt="Wild Fenn with Olly and Matt standing either side of Luke and Jess sitting on a bench, looking cool."/>
-            </div>
-        </section>
-        {{ end }}
-
-        <!-- About-->
-        {{ with site.Data.homepage.about }}
-        <section class="about-section text-center" id="about">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8">
-                        <h2 class="text-white mb-4">{{ .title }}</h2>
-                        <p class="text-white-50 text-start">
-                            Wild Fenn are an Indie/Folk band based in Devon, UK. Songwriters Luke Engel and Jess Illingworth love writing songs with beautiful harmonies that work both in live performances and in recordings. Their lyrics often take inspiration from nature and lead the listener to wild places.
-                        </p>
-                        <p class="text-white-50 text-start">
-                            The band started releasing music in 2019 under the name Engel and the Mountain People and changed to Wild Fenn with Jess joining at the beginning of 2022. Wild Fenn are influenced by the likes of Gregory Alan Isokov, Roo Panes, Frank Turner and The Lone Bellow (among others).
-                        </p>
-                        <p class="text-white-50 text-start">
-                            Wild Fenn’s latest singles Wild Hearts and South Coast were played by BBC Introducing on BBC Radio Cornwall and BBC Radio Devon. Wild Fenn have previously performed at the Great Estate Festival in Cornwall in 2022 and 2024 as well as Tunes in the Park in 2024.
-                        </p>
-                        <p class="text-white-50 text-start">
-                            “Rising and falling harmonies combined with poetic lyrics paint pictures of summer nights and bygone days. Wild Fenn’s songs are heavily inspired by the natural world and their lyrics aim to convey a subtle urgency to remember, cherish and protect our wild places.” - <em>BBC Introducing</em>
-                        </p>
-                        <p class="text-white-50 text-start">
-                            “A gentile and beautiful way to open the BBC Introducing stage” - <em>Dan Pascoe, BBC Introducing</em>
-                        </p>
-                        {{ if .button.enable }}
-                        <a class="btn btn-primary about-btn" href="{{ .button.url }}">{{ .button.text }}</a>
-                        {{ end }}
-                    </div>
-                </div>
-                <img class="img-fluid img-bw" src="{{ .image }}" alt="..." />
-            </div>
-        </section>
-        {{ end }}
-
-        <!-- Projects-->
-        {{ with site.Data.homepage.projects }}
-        <section class="projects-section bg-light">
-            <div class="container px-4 px-lg-5">
-
-                <!-- Featured Project Row-->
-                <div class="row gx-0 mb-4 mb-lg-5 align-items-center" id="latest">
-                    <div class="col-xl-8 col-lg-7">
-                        <!-- <img class="img-fluid mb-3 mb-lg-0" src="{{ .card1.img }}" alt="..." /> -->
-                        <iframe src="https://www.youtube.com/embed/{{ .card1.youtube.id }}?autoplay=1" style="width:100%; height: 420px;" allowfullscreen title="{{ .card1.youtube.title }}"></iframe>
-                    </div>
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="featured-text text-center text-lg-left">
-                            <h4>{{ .card1.title }}</h4>
-                            <p class="text-black-50 text-start">Wild Hearts is about adventure, freedom, and a connection with nature. The song leads you down a wild road, taking you away from the city, through an old pine gate into the forest. It’s a song about the idea of running with wild hearts and making your name known in the world, despite the challenges you encounter. This song is Wild Fenn’s first release with our newest member, Jess Illingworth, on guitar and vocals.</p>
-                            <p class="text-black-50 text-start">Check out the live session of our latest single Wild Hearts on YouTube. We filmed this in Plymbridge Woods (surrounded by lots of wild garlic!). Thank you to Louis Goldman for the videography.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project One Row-->
-                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center" id="theband">
-                    <div class="col-lg-6"><img class="img-fluid img-bw" src="{{ .card2.img }}" alt="..." /></div>
-                    <div class="col-lg-6">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">{{ .card2.title }}</h4>
-                                    <p class="mb-0 text-white-50">{{ .card2.text }}</p>
-                                    <hr class="d-none d-lg-block mb-0 ms-0" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Two Row-->
-                <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid img-bw" src="{{ .card3.img }}" alt="..." /></div>
-                    <div class="col-lg-6 order-lg-first">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">{{ .card3.title }}</h4>
-                                    <p class="mb-0 text-white-50">{{ .card3.text }}</p>
-                                    <hr class="d-none d-lg-block mb-0 me-0" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Three Row-->
-                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid img-bw" src="{{ .card4.img }}" alt="..." /></div>
-                    <div class="col-lg-6">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">{{ .card4.title }}</h4>
-                                    <p class="mb-0 text-white-50">{{ .card4.text }}</p>
-                                    <hr class="d-none d-lg-block mb-0 ms-0" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Four Row-->
-                <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid img-bw" src="{{ .card5.img }}" alt="..." /></div>
-                    <div class="col-lg-6 order-lg-first">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">{{ .card5.title }}</h4>
-                                    <p class="mb-0 text-white-50">{{ .card5.text }}</p>
-                                    <hr class="d-none d-lg-block mb-0 me-0" />
-                                </div>
+            <!-- Project One Row-->
+            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center" id="theband">
+                <div class="col-lg-6"><img class="img-fluid" src="{{ .card2.img }}" alt="..." /></div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <h4 class="text-white">{{ .card2.title }}</h4>
+                                <p class="mb-0 text-white-50">{{ .card2.text }}</p>
+                                <hr class="d-none d-lg-block mb-0 ms-0" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        {{ end }}
-
-        <!-- Upcoming gigs -->
-        <section class="upcoming-gigs" id="upcoming">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-10 col-lg-8 mx-auto text-center">
-                        <a href="https://www.songkick.com/artists/10261226" class="songkick-widget" data-theme="light" data-track-button="on" data-detect-style="true" data-background-color="transparent" data-locale="en">Wild Fenn Tour Dates</a>
-                        <script src="//widget.songkick.com/10261226/widget.js"></script>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Signup-->
-        {{ if site.Params.signup.enabled }}
-        <section class="signup-section" id="signup">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-10 col-lg-8 mx-auto text-center">
-                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-                        <form class="form-signup" id="contactForm" data-sb-form-api-token="{{ site.Params.sbtoken }}">
-                            <div class="row input-group-newsletter">
-                                <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
-                            </div>
-                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
-                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3 mt-2 text-white">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                </div>
-                            </div>
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        {{ end }}
-
-        <!-- Contact-->
-        <section class="contact-section bg-black" id="contact">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-envelope text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Email</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="#!">{{ site.Params.contact.email }}</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fab fa-facebook text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Facebook</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">{{ site.Params.contact.facebook }}</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fab fa-instagram text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Instagram</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">{{ site.Params.contact.instagram }}</div>
+            <!-- Project Two Row-->
+            <div class="row gx-0 justify-content-center">
+                <div class="col-lg-6"><img class="img-fluid" src="{{ .card3.img }}" alt="..." /></div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-white">{{ .card3.title }}</h4>
+                                <p class="mb-0 text-white-50">{{ .card3.text }}</p>
+                                <hr class="d-none d-lg-block mb-0 me-0" />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="social d-flex justify-content-center">
-                    <a class="mx-2" href="{{ site.Params.spotify }}"><i class="fab fa-spotify"></i></a>
-                    <a class="mx-2" href="{{ site.Params.youtube }}"><i class="fab fa-youtube"></i></a>
-                    <a class="mx-2" href="{{ site.Params.tiktok }}"><i class="fab fa-tiktok"></i></a>
-                    <a class="mx-2" href="{{ site.Params.instagram }}"><i class="fab fa-instagram"></i></a>
-                    <a class="mx-2" href="{{ site.Params.facebook }}"><i class="fab fa-facebook"></i></a>
-                    <a class="mx-2" href="{{ site.Params.bandcamp }}"><i class="fab fa-bandcamp"></i></a>
-                    <a class="mx-2" href="{{ site.Params.github }}"><i class="fab fa-github"></i></a>
+            </div>
+            <!-- Project Three Row-->
+            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                <div class="col-lg-6"><img class="img-fluid" src="{{ .card4.img }}" alt="..." /></div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <h4 class="text-white">{{ .card4.title }}</h4>
+                                <p class="mb-0 text-white-50">{{ .card4.text }}</p>
+                                <hr class="d-none d-lg-block mb-0 ms-0" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-{{- partial "footer.html" . -}}
+            <!-- Project Four Row-->
+            <div class="row gx-0 justify-content-center">
+                <div class="col-lg-6"><img class="img-fluid" src="{{ .card5.img }}" alt="..." /></div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-white">{{ .card5.title }}</h4>
+                                <p class="mb-0 text-white-50">{{ .card5.text }}</p>
+                                <hr class="d-none d-lg-block mb-0 me-0" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{ end }}
+
+    <!-- Upcoming gigs -->
+    <section class="upcoming-gigs" id="upcoming">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-10 col-lg-8 mx-auto text-center">
+                    <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
+                    <a class="bit-widget-initializer" data-artist-name="id_15637823"
+                        data-app-id="b1e93cd7dc64dc6e6c512ee9f472d732"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup-->
+    {{ if site.Params.signup.enabled }}
+    <section class="signup-section" id="signup">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-10 col-lg-8 mx-auto text-center">
+                    <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                    <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+                    <form class="form-signup" id="contactForm" data-sb-form-api-token="{{ site.Params.sbtoken }}">
+                        <div class="row input-group-newsletter">
+                            <div class="col"><input class="form-control" id="emailAddress" type="email"
+                                    placeholder="Enter email address..." aria-label="Enter email address..."
+                                    data-sb-validations="required,email" /></div>
+                            <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton"
+                                    type="submit">Notify Me!</button></div>
+                        </div>
+                        <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is
+                            required.</div>
+                        <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.
+                        </div>
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3 mt-2 text-white">
+                                <div class="fw-bolder">Form submission successful!</div>
+                            </div>
+                        </div>
+                        <div class="d-none" id="submitErrorMessage">
+                            <div class="text-center text-danger mb-3 mt-2">Error sending message!</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{ end }}
+
+    <!-- Contact-->
+    <section class="contact-section bg-black" id="contact">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-envelope text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Email</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50"><a href="#!">{{ site.Params.contact.email }}</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fab fa-facebook text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Facebook</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50">{{ site.Params.contact.facebook }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fab fa-instagram text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Instagram</h4>
+                            <hr class="my-4 mx-auto" />
+                            <div class="small text-black-50">{{ site.Params.contact.instagram }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="social d-flex justify-content-center">
+                <a class="mx-2" href="{{ site.Params.spotify }}"><i class="fab fa-spotify"></i></a>
+                <a class="mx-2" href="{{ site.Params.youtube }}"><i class="fab fa-youtube"></i></a>
+                <a class="mx-2" href="{{ site.Params.tiktok }}"><i class="fab fa-tiktok"></i></a>
+                <a class="mx-2" href="{{ site.Params.instagram }}"><i class="fab fa-instagram"></i></a>
+                <a class="mx-2" href="{{ site.Params.facebook }}"><i class="fab fa-facebook"></i></a>
+                <a class="mx-2" href="{{ site.Params.bandcamp }}"><i class="fab fa-bandcamp"></i></a>
+                <a class="mx-2" href="{{ site.Params.github }}"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+    {{- partial "footer.html" . -}}
 </body>
+
 </html>

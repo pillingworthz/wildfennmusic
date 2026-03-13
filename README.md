@@ -20,4 +20,3 @@ Run the development server
 ```sh
 hugo server
 ```
-

@@ -28,7 +28,14 @@ about:
   image: "assets/img/about-us.jpg"
 
 projects:
-  card1:
+  card1a:
+    title: "Fearless Parade"
+    text: ""
+    youtube:
+      id: "1iQiUpureZo"
+      title: "Fearless Parade"
+    img: "assets/img/jess-and-luke.jpg"
+  card1b:
     title: "Wild Hearts"
     text: ""
     youtube:

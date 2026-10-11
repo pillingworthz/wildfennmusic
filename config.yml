@@ -1,9 +1,10 @@
-baseURL: https://windfenn.co.uk/
+baseURL: https://wildfenn.co.uk/
 languageCode: 'en-gb'
 title: 'Wild Fenn'
 
 ## Site Settings
 params:
+  description: "Wild Fenn are an indie/folk band from Devon, UK. Listen, watch and get in touch."
   logo: ""
   favicon: "assets/favicon.png"
 

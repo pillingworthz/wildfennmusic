@@ -1,0 +1,33 @@
+disabled = false
+locale = "en"
+label = "English"
+weight = 1
+title = "Wild Fenn"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "1 January 2026"
+  logo = "img/logo.png"
+  # secondaryLogo = "img/secondary-logo.png"
+  description = "Wild Fenn"
+  copyright = "© 2026 Wild Fenn. All rights reserved."
+
+[params.author]
+  name = "Wild Fenn"
+  email = "enquiries@wildfenn.co.uk"
+  image = "img/logo.png"
+  imageQuality = 96
+  headline = "Indie/Folk band"
+  bio = "Indie/Folk band based in Devon, UK"
+  links = [
+    { email = "enquiries@wildfenn.co.uk" },
+    # { bandcamp = "https://wildfenn.bandcamp.com/" },
+    { facebook = "@wildfennmusic" },
+    # { github = "https://github.com/pillingworthz/wildfennmusic" },
+    { instagram = "@wildfenn" },
+    { spotify = "https://open.spotify.com/artist/3BXB84OdyawXkx1wv5T6Ra?si=UUzIL9QkR1GiikFc3Yfdng" },
+    # { tiktok = "https://www.tiktok.com/@wildfenn" },
+    { youtube = "https://www.youtube.com/@wildfenn" }
+  ]

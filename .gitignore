@@ -1,2 +1,16 @@
-public
-.hugo_build.lock
+# Compiled site output directory
+/public/
+
+# Hugo generated resource cache
+/resources/_gen/
+
+# Hugo lock file
+/.hugo_build.lock
+
+# Asset stats (if using Blowfish Tailwind JIT features)
+hugo_stats.json
+
+# Local environment / OS clutter
+.DS_Store
+Thumbs.db
+node_modules/

@@ -1,0 +1,24 @@
+{{ $artist := .Get "artist" | default (.Get 0) }}
+{{ $appId := .Get "appId" | default "b1e93cd7dc64dc6e6c512ee9f472d732" }}
+{{ $textColor := .Get "textColor" | default "#FFFFFF" }}
+{{ $linkColor := .Get "linkColor" | default "#64A19D" }} {{/* Uses your custom Teal #64A19D */}}
+
+<div class="bandsintown-widget-wrapper my-8 w-full overflow-hidden">
+  <a 
+    class="bit-widget-initializer"
+    data-artist-name="{{ $artist }}"
+    data-app-id="{{ $appId }}"
+    data-background-color="transparent"
+    data-text-color="{{ $textColor }}"
+    data-link-color="{{ $linkColor }}"
+    data-popup-background-color="#18181b"
+    data-display-local-dates="true"
+    data-display-past-dates="false"
+    data-display-details="false"
+    data-display-lineup="false"
+    data-display-start-time="false"
+    data-display-limit="10"
+    data-auto-style="false">
+  </a>
+  <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
+</div>

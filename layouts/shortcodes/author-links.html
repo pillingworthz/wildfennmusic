@@ -1,0 +1,20 @@
+<div class="author-links-grid my-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+  {{ range .Site.Params.author.links }}
+    {{ range $name, $url := . }}
+      <a 
+        href="{{ $url }}" 
+        target="_blank" 
+        rel="me noopener noreferrer"
+        class="flex items-center gap-3 p-4 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800/50 hover:border-primary-500 dark:hover:border-primary-500 transition-all no-underline group"
+      >
+        <span class="p-2 rounded-lg bg-primary-500/10 text-primary-500 group-hover:bg-primary-500 group-hover:text-white transition-colors">
+          {{ partial "icon.html" $name }}
+        </span>
+        <div class="flex flex-col">
+          <span class="text-sm font-semibold capitalize text-neutral-800 dark:text-neutral-200">{{ $name }}</span>
+          <span class="text-xs text-neutral-500 dark:text-neutral-400 truncate max-w-[200px]">{{ $url }}</span>
+        </div>
+      </a>
+    {{ end }}
+  {{ end }}
+</div>

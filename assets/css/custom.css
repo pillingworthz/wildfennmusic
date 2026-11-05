@@ -1,0 +1,44 @@
+/** Cormorant fonts for titles */
+@font-face {
+  font-family: "Cormorant";
+  src: url("../fonts/Cormorant-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* For some reason the default styling hid the menu behind the backgound image - so this sorts that out */
+body:has(#landing-hero-background)>header {
+  position: relative;
+  z-index: 10;
+}
+
+/* Target ONLY the main title on the homepage splash area */
+h1.landing-rise {
+  font-family: Cormorant, serif !important;
+  font-weight: 500;
+  font-size: 6em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Overriding this can be used to change the filter applied to the heading image */
+.hero-canvas-fade {
+  -webkit-mask-image: linear-gradient(to bottom, black 67%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 67%, transparent 100%);
+}
+
+/* Left align the text on the home page - except for the first paragraph */
+@media (min-width: 640px) {
+    section.landing-rise > *:not(:first-child) {
+        text-align: left;
+    }
+}
+
+/* Hide dates inside post navigation links and list cards */
+.article-card time,
+article time,
+.recent-posts time,
+span.text-xs.text-neutral-500 {
+  display: none !important;
+}

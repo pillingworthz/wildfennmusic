@@ -1,0 +1,24 @@
+{{/* Extract arguments: positional or named */}}
+{{ $type := .Get "type" | default (.Get 0) | default "track" }}
+{{ $id := .Get "id" | default (.Get 1) | default (.Get 0) }}
+
+{{/* Handle single-argument calls where only the ID is passed */}}
+{{ if and (not (.Get "id")) (not (.Get 1)) }}
+  {{ $id = .Get 0 }}
+  {{ $type = "track" }}
+{{ end }}
+
+{{ $height := .Get "height" | default (cond (eq $type "track") "152" "352") }}
+
+<div class="my-6 w-full overflow-hidden rounded-xl shadow-lg">
+  <iframe
+    style="border-radius:12px"
+    src="https://open.spotify.com/embed/{{ $type }}/{{ $id }}?utm_source=generator&theme=0"
+    width="100%"
+    height="{{ $height }}"
+    frameBorder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+  </iframe>
+</div>

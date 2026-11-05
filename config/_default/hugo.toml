@@ -3,8 +3,8 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish"
-baseURL = "https://pillingworthz.github.io/greenspottedpuffer/"
-# baseURL = "https://www.wildfenn.co.uk/"
+# baseURL = "https://pillingworthz.github.io/greenspottedpuffer/"
+baseURL = "https://www.wildfenn.co.uk/"
 locale = "en"
 defaultContentLanguage = "en"
 
